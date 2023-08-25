@@ -3,14 +3,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <unistd.h>
+#include <ctype.h>
 #include <fcntl.h>
 #include <string.h>
-#include <ctype.h>
+#include <sys/types.h>
 /**
- * struct stack_s -its doubly linked list rep of a stack (or queue)
+ * struct stack_s - d-linked list rep of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
@@ -26,7 +25,7 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 /**
- * struct bus_s - a var -args, file, line content
+ * struct bus_s - var -args, file, line content
  * @arg: value
  * @file: pointer to monty file
  * @content: line content
@@ -41,15 +40,15 @@ typedef struct bus_s
 	int lifi;
 }  bus_t;
 extern bus_t bus;
+
 /**
- * struct instruction_s - a opcode and its function
+ * struct instruction_s - opcode instructions
  * @opcode: the opcode
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
-
 typedef struct instruction_s
 {
 	char *opcode;
@@ -81,4 +80,3 @@ void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
 
 #endif
-

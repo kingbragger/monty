@@ -11,7 +11,7 @@
 /**
  * struct stack_s - d-linked list rep of a stack (or queue)
  * @n: integer
- * @prev: points to the previous element of the stack (or queue)
+ * @prev: indicates to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
@@ -20,9 +20,9 @@
 
 typedef struct stack_s
 {
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
+int n;
+struct stack_s *prev;
+struct stack_s *next;
 } stack_t;
 /**
  * struct bus_s - var -args, file, line content
